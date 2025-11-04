@@ -1,65 +1,81 @@
-import Image from "next/image";
+"use client"
+
+import Image from "next/image"
+import { Navbar } from "@/components/navbar"
+import { TestimonialSection } from "@/components/testimonial-section"
+import { ProcessSection } from "@/components/process-section"
+import { DifferenceSection } from "@/components/difference-section"
+import { WhyExpeditieMDSection } from "@/components/why-expeditie-md-section"
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="relative w-full min-h-screen sm:h-screen bg-gradient-to-b from-blue-300 via-blue-200 to-blue-100 overflow-hidden pt-24 sm:pt-0">
+        <div className="absolute inset-0">
+          <Image
+            src="/medical-airport-background-sky.jpg"
+            alt="Airport background"
+            fill
+            className="object-cover opacity-40"
+            priority
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-300/30 via-transparent to-black/20"></div>
+
+        <div className="relative z-10 min-h-screen sm:h-full flex flex-col sm:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6">
+          {/* Left Content */}
+          <div className="flex-1 pt-8 sm:pt-24 flex flex-col justify-center text-center sm:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-6 sm:mb-8 leading-tight font-outfit">
+              Practice medicine.
+              <br />
+              See the world. On your
+              <br />
+              terms.
+            </h1>
+
+            <p className="text-base sm:text-lg md:text-xl text-white font-light leading-relaxed mb-8 sm:mb-12 max-w-2xl mx-auto sm:mx-0 font-satoshi">
+              Join a growing network of elite physicians unlocking flexible, high-paying locum opportunities — paired
+              with luxury travel and full-service support.
+            </p>
+
+            <button className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg w-fit mx-auto sm:mx-0 transition transform hover:scale-105 font-outfit">
+              Start your Journey here
+            </button>
+          </div>
+
+          {/* Right Content - Image */}
+          <div className="flex-1 relative h-48 sm:h-full flex items-center justify-center sm:justify-end pt-8 sm:pt-24">
+            <div className="relative w-48 sm:w-80 md:w-96 h-48 sm:h-96">
+              <Image
+                src="/female-doctor-medical-professional-scrubs-tablet.jpg"
+                alt="Medical professional"
+                width={500}
+                height={600}
+                className="object-contain"
+              />
+
+              <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-10 sm:w-16 h-10 sm:h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-xl sm:text-3xl font-bold shadow-lg">
+                T
+              </div>
+              <div className="absolute bottom-16 sm:bottom-32 right-4 sm:right-10 w-10 sm:w-16 h-10 sm:h-16 bg-purple-600 rounded-full flex items-center justify-center text-white text-xl sm:text-3xl font-bold shadow-lg">
+                T
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
-  );
+      </section>
+
+      <TestimonialSection />
+
+      <ProcessSection />
+
+      <DifferenceSection />
+
+      <WhyExpeditieMDSection />
+    </main>
+  )
 }
