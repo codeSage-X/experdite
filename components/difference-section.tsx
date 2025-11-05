@@ -2,21 +2,21 @@
 
 import Image from "next/image"
 import { Check } from "lucide-react"
+import coop from '../public/coop.png'
 
 export function DifferenceSection() {
   return (
-    <section className="w-full bg-black py-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <h2 className="text-5xl font-bold text-center mb-16 font-outfit">
-          <span className="text-yellow-500">The ExpeditieMD</span>
-          <span className="text-white"> Difference</span>
+    <section className="w-full bg-[#0C0C0C] h-[100vh] py-12 sm:py-16 md:py-24 px-4 sm:px-6">
+      <div className="max-w-screen-2xl mx-auto">
+        {/* Section title */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 font-outfit text-[#F9EEB6]">
+          The ExpediteMD Difference
         </h2>
 
-        <div className="grid grid-cols-2 gap-12 items-center">
-          {/* Left Card */}
-          <div className="border border-yellow-600 rounded-2xl p-8 bg-black/40">
-            <p className="text-white text-lg leading-relaxed mb-12 font-satoshi">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start lg:items-center">
+          {/* Left Text Card */}
+          <div className="border border-[#2A2A2A] rounded-2xl p-6 sm:p-8 md:p-10 bg-black/40 shadow-lg">
+            <p className="text-white text-base sm:text-lg md:text-xl leading-relaxed mb-10 font-satoshi">
               Driven by the realities of modern healthcare, we cut the noise between talent and teams. Vetted matches,
               clean onboarding, clear pay, real support.
             </p>
@@ -24,52 +24,52 @@ export function DifferenceSection() {
             <div className="space-y-6">
               {/* Feature 1 */}
               <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yellow-500 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-black" strokeWidth={3} />
+                <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#007BFF] flex items-center justify-center shadow-md">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                 </div>
-                <span className="text-yellow-500 text-lg font-semibold font-satoshi">Faster, safer placements</span>
+                <span className="text-[#F9EEB6] text-base sm:text-lg md:text-xl font-semibold font-satoshi">
+                  Faster, safer placements
+                </span>
               </div>
 
               {/* Feature 2 */}
               <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yellow-500 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-black" strokeWidth={3} />
+                <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#007BFF] flex items-center justify-center shadow-md">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                 </div>
-                <span className="text-yellow-500 text-lg font-semibold font-satoshi">Curated matches that last</span>
+                <span className="text-[#F9EEB6] text-base sm:text-lg md:text-xl font-semibold font-satoshi">
+                  Curated matches that last
+                </span>
               </div>
 
               {/* Feature 3 */}
               <div className="flex items-center gap-4">
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-yellow-500 flex items-center justify-center">
-                  <Check className="w-4 h-4 text-black" strokeWidth={3} />
+                <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#007BFF] flex items-center justify-center shadow-md">
+                  <Check className="w-4 h-4 sm:w-5 sm:h-5 text-white" strokeWidth={3} />
                 </div>
-                <div className="flex items-center gap-3">
-                  <span className="text-yellow-500 text-lg font-semibold font-satoshi">Full support, always</span>
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-sm font-bold text-white">
-                    👤
-                  </div>
-                </div>
+                <span className="text-[#F9EEB6] text-base sm:text-lg md:text-xl font-semibold font-satoshi">
+                  Full support, always
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Right Content */}
-          <div className="space-y-6">
-            {/* Image */}
-            <div className="relative w-full h-80 rounded-xl overflow-hidden">
+          {/* Right Side */}
+          <div className="space-y-6 sm:space-y-8">
+            {/* Placeholder image */}
+            <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-xl overflow-hidden">
               <Image
-                src="/medical-professionals-handshake.jpg"
-                alt="Medical professionals collaboration"
+                src={coop} // 🟦 Replace this with your actual image later
+                alt="Healthcare professionals collaborating"
                 fill
                 className="object-cover"
               />
             </div>
 
-            {/* Description Text */}
-            <p className="text-white text-lg leading-relaxed font-satoshi">
+            {/* Description text */}
+            <p className="text-[#E5E5E5] text-base sm:text-lg md:text-xl leading-relaxed font-satoshi">
               Start faster with verified credentials, clear contracts, and proactive scheduling. We align licensure,
-              onboarding, and travel in parallel so you arrive ready to treat patients, not chase paperwork or
-              logistics.
+              onboarding, and travel in parallel so you arrive ready to treat patients, not chase paperwork or logistics.
             </p>
           </div>
         </div>

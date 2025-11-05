@@ -1,3 +1,37 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/outfit-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/outfit-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 @import "tailwindcss";
 
 @theme inline {
@@ -91,5 +125,59 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.satoshi {
+  font-family: 'Satoshi';
+  font-weight: 600;
+}
+
+.outfit {
+  font-family: 'Outfit', sans-serif;
+  /* color: green; */
+}
+
+
+/* .testimonial_bg {
+  background-image: url();
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.testimonial_sm {
+  background-image: url('../public/test_sm.png');
+   background-color: #121212 ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 80vh;
+  opacity: 0;
+}
+
+/* responsiveness */
+
+@media screen and (max-width:690px) {
+
+  .testimonial_bg {
+    opacity: 0;
+  }
+   .testimonial_sm {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width:690px) {
+  .testimonial_bg {
+  background-image: url('../public/testimonial_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  }
 }
