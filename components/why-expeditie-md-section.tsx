@@ -35,11 +35,11 @@ const whyCards: WhyCard[] = [
 
 export function WhyExpeditieMDSection() {
   return (
-    <section className="w-full bg-black py-16 sm:py-24 px-4 sm:px-6">
+    <section className="w-full bg-[#121212] py-16 sm:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 font-outfit">
           <span className="text-white">So, Why </span>
-          <span className="text-yellow-500">ExpeditieMD?</span>
+          <span className="text-[#F6E58B]">ExpeditieMD?</span>
         </h2>
 
         {/* Responsive cards grid - 1 column on mobile, 2 on tablet, 3 on desktop */}

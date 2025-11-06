@@ -87,6 +87,8 @@
   }
 }
 
+
+
 /* Added animations for process carousel */
 @keyframes cycle-process {
   0% {
@@ -103,6 +105,31 @@
   }
 }
 
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+ background: #F6E58B;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F6E58B;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #F6E58B #1a1a1a;
+  scroll-behavior: smooth;
+}
+
 .process-carousel {
   animation: cycle-process 9s ease-in-out infinite;
 }
@@ -117,7 +144,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #121212;
     --foreground: #ededed;
   }
 }
@@ -126,6 +153,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif; */
+  scroll-behavior:auto;
 }
 
 .satoshi {

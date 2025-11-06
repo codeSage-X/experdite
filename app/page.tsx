@@ -4,10 +4,30 @@ import { TestimonialSection } from "@/components/testimonial-section"
 import { ProcessSection } from "@/components/process-section"
 import { DifferenceSection } from "@/components/difference-section"
 import { WhyExpeditieMDSection } from "@/components/why-expeditie-md-section"
+import { PhysiciansSection } from "@/components/physictians-section"
+import { WorkLifeBalanceSection } from "@/components/work-life-balance"
+import { Footer } from "@/components/footer"
+import { useEffect } from "react"
+// import { useRouter } from 'next/router';
 
 
 
 export default function Home() {
+  // const router = useRouter();
+ useEffect(() => {
+    // Check if there's a hash in the URL
+    const hash = window.location.hash;
+    if (hash) {
+      // Remove the # symbol
+      const id = hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ 
+          behavior: 'smooth' 
+        });
+      }, 100);
+    }
+  }, []);
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -16,8 +36,8 @@ export default function Home() {
       <section
         className="relative w-full min-h-screen sm:h-screen bg-cover bg-center bg-no-repeat overflow-hidden pt-24 sm:pt-0"
         style={{
-          backgroundImage: "url('/female-doctor-medical-professional-scrubs-tablet.jpg')",
-          backgroundPosition: "right center",
+          backgroundImage: "url('/bgd.png')",
+          backgroundPosition: "center center",
         }}
       >
         {/* Overlay gradient for text readability */}
@@ -42,14 +62,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <TestimonialSection />
+      <div id="process">
+      <TestimonialSection/>
+      </div>
 
       <ProcessSection />
 
       <DifferenceSection />
 
+      <div id="why-us">
       <WhyExpeditieMDSection />
+      </div>
+
+      <PhysiciansSection/>
+
+      <WorkLifeBalanceSection/>
+
+      <Footer/>
     </main>
   )
 }
