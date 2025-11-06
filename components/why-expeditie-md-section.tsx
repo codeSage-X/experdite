@@ -58,8 +58,8 @@ export function WhyExpeditieMDSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
-                <div className="text-4xl sm:text-6xl font-bold text-yellow-500 mb-2 font-outfit">{card.number}</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3 font-outfit">{card.title}</h3>
+                <div className="text-4xl sm:text-6xl font-bold text-[#F6E58B] mb-2 font-outfit">{card.number}</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#F6E58B] mb-2 sm:mb-3 font-outfit">{card.title}</h3>
                 <p className="text-xs sm:text-sm leading-relaxed font-satoshi text-gray-300">{card.description}</p>
               </div>
             </div>

@@ -9,25 +9,35 @@ export default function About() {
       <Navbar />
 
       {/* Hero Section */}
-      <section
-      className="  relative h-[25vh] md:h-[40vh] lg:h-[40vh] xl:h-[60vh] bg-[#121212]  bg-contain  bg-center bg-no-repeat flex items-center"
-      style={{
-        backgroundImage: 'url("/about.png")',
+   <section 
+  className="relative py-12 md:py-16 lg:py-20 px-4 md:px-6 bg-[#121212] mt-8 h-[30vh] sm:h-[35vh] md:h-[40vh] lg:h-[50vh] xl:h-[60vh] bg-contain bg-center bg-no-repeat"
+  style={{
+    backgroundImage: 'url("/abt.png")',
+  }}
+>
+  <div className="relative max-w-7xl mx-auto z-10 h-full flex flex-col justify-center items-center">
+    <div
+      className="inline-block w-auto px-4 sm:px-6 py-2 sm:py-3 rounded-[15px] text-sm sm:text-base font-medium mb-4 md:mb-6 border border-gray-600/50"
+      style={{ 
+        backgroundColor: "rgba(47, 47, 47, 0.5)", 
+        color: "#FFFFFF",
+        backdropFilter: "blur(10px)"
       }}
     >
-        {/* <div className="max-w-4xl mx-auto text-center">
-          <span
-            className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6"
-            style={{ backgroundColor: "#2F2F2F", color: "#F6E58B" }}
-          >
-            About us
-          </span>
-          <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
-            ExpedMD is the backbone of cultural and sociocultural{" "}
-            <span style={{ color: "#F6E58B" }}>medical excellence</span>
-          </h1>
-        </div> */}
-      </section>
+      About Us
+    </div>
+    
+    <h1 
+      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 text-center px-4 sm:px-6 py-3 sm:py-4 rounded-lg w-full sm:w-[90%] md:w-[80%] lg:w-[60%] xl:w-[60%]" 
+      style={{
+        backgroundColor: "rgba(0, 0, 0, 0.04)",
+        backdropFilter: "blur(1px)"
+      }}
+    >
+      <span className="text-[#F6E58B]">Experdite MD</span> is the backbone of cultural and social cultural
+    </h1>
+  </div>
+</section>
 
       {/* Who We Are Section */}
       <section className="py-20 px-6" style={{ backgroundColor: "#121212" }}>
