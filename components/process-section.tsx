@@ -35,7 +35,7 @@ export function ProcessSection() {
   }, [])
 
   return (
-    <section className="w-full bg-[#F9EEB6] min-h-screen flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="process w-full bg-[#F9EEB6] h-[90vh] md:h-[60vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-screen-2xl mx-auto w-full flex flex-col items-center sm:items-start text-center sm:text-left">
         {/* Heading + icon */}
         <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6 sm:gap-0 mb-10 sm:mb-12 md:mb-16 w-full">

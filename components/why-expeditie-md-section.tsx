@@ -35,7 +35,7 @@ const whyCards: WhyCard[] = [
 
 export function WhyExpeditieMDSection() {
   return (
-    <section className="w-full bg-[#121212] py-16 sm:py-24 px-4 sm:px-6">
+    <section className="w-full bg-[#121212] py-16 sm:py-24 px-4 sm:px-6 -mt-24 ">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-12 sm:mb-16 font-outfit">
           <span className="text-white">So, Why </span>

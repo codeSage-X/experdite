@@ -8,14 +8,14 @@ import goldtick from '../public/goldtick.png'
 
 export function DifferenceSection() {
   return (
-    <section className="w-full bg-[#121212] py-12 sm:py-16 md:py-24 px-4 sm:px-6">
+    <section className="difference w-full  bg-[#121212] py-12 sm:py-16 md:py-24 px-4 sm:px-6">
       <div className="max-w-screen-2xl mx-auto">
         {/* Section title */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16 font-outfit text-[#F9EEB6]">
           The ExpediteMD Difference
         </h2>
 
-        <div className="w-full min-h-[80vh] lg:min-h-[100vh] flex justify-center items-center py-8">
+        <div className="w-full flex justify-center items-center py-8 ">
           <div className="h-full w-full lg:w-[90%] xl:w-[80%] 2xl:w-[70%] flex flex-col lg:flex-row justify-center items-center gap-6">
             
             {/* Left Card */}
