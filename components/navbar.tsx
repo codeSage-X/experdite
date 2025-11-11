@@ -70,10 +70,10 @@ export function Navbar() {
         {/* Navigation Links - Desktop */}
         <div className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-12">
           <Link
-            href="/#process"
+            href="/#home"
             className="text-white text-xs md:text-sm lg:text-base font-light satoshi hover:text-yellow-100 transition"
           >
-            Our Process
+            Home
           </Link>
           <Link
             href="/#why-us"
@@ -102,11 +102,11 @@ export function Navbar() {
             className="absolute top-full left-0 right-0 bg-[#1a1a1a] md:hidden flex flex-col gap-4 p-6 shadow-lg"
           >
             <Link 
-              href="/#process" 
+              href="/#Home" 
               className="text-white satoshi hover:text-yellow-100 transition"
               onClick={handleClose}
             >
-              Our Process
+              Home
             </Link>
             <Link 
               href="/#why-us" 

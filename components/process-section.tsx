@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { ArrowUpRight } from "lucide-react"
 
 const STEPS = [
@@ -25,14 +25,7 @@ const STEPS = [
 ]
 
 export function ProcessSection() {
-  const [activeStep, setActiveStep] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % STEPS.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+  const [activeStep, setActiveStep] = useState(0) // default step 1 active
 
   return (
     <section className="process w-full bg-[#F9EEB6] h-[90vh] md:h-[60vh] lg:h-[100vh] xl:h-[100vh] 2xl:h-[100vh] flex items-center justify-center py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8">
@@ -51,9 +44,9 @@ export function ProcessSection() {
           </div>
         </div>
 
-        {/* Animated description */}
-        <div className="mb-10 sm:mb-12 md:mb-16 max-w-2xl mx-auto sm:mx-0">
-          <p className="text-sm sm:text-base md:text-lg text-black leading-relaxed font-satoshi transition-all duration-500 ease-in-out">
+        {/* Description for active step */}
+        <div className="mb-10 sm:mb-12 md:mb-16 max-w-2xl mx-auto sm:mx-0 transition-all duration-500 ease-in-out">
+          <p className="text-sm sm:text-base md:text-lg text-black leading-relaxed font-satoshi">
             {STEPS[activeStep].description}
           </p>
         </div>
@@ -66,7 +59,8 @@ export function ProcessSection() {
             return (
               <div
                 key={step.id}
-                className="flex-1 w-full flex flex-col items-center sm:items-start text-center sm:text-left transition-all duration-500"
+                onMouseEnter={() => setActiveStep(index)} // 👈 activate on hover
+                className="flex-1 w-full flex flex-col items-center sm:items-start text-center sm:text-left transition-all duration-500 cursor-pointer"
               >
                 {/* Dots and connecting line */}
                 <div className="w-full flex items-center justify-center sm:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6">
@@ -87,7 +81,7 @@ export function ProcessSection() {
                     </div>
                   </div>
 
-                  {/* Line — show for ALL steps */}
+                  {/* Line for all steps */}
                   <div
                     className={`hidden sm:block flex-1 h-0.5 md:h-1 transition-all duration-500 ${
                       isActive ? "bg-black" : "bg-gray-300"

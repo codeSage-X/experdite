@@ -34,7 +34,7 @@ export default function About() {
         backdropFilter: "blur(1px)"
       }}
     >
-      <span className="text-[#F6E58B]">Experdite MD</span> is the backbone of cultural and social cultural
+      <span className="text-[#F6E58B]">ExpediteMD</span> is the backbone of cultural and social cultural
     </h1>
   </div>
 </section>

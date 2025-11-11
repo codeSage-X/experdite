@@ -25,12 +25,12 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-sm md:text-base font-outfit font-bold">Social links</h3>
             <div className="flex flex-col gap-2">
-              <a
+              {/* <a
                 href="tel:+56-7977-5947-579"
                 className="text-xs md:text-sm font-satoshi hover:text-yellow-500 transition"
               >
                 +56-7977-5947-579
-              </a>
+              </a> */}
               <a
                 href="mailto:expedite@seoemail.com"
                 className="text-xs md:text-sm font-satoshi hover:text-yellow-500 transition"
